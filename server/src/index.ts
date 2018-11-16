@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import api from './api/index';
+import { success } from './utils/logger';
 
 // Instantiation du framework express
 const app = express();
@@ -14,7 +15,7 @@ export default () => {
     app.listen(8080, () => {
         // On fait écouter notre serveur sur le port 8080 et on passe un callback
         // exécuté lorsque le serveur est prêt à recevoir des requêtes.
-        console.log('Serveur démarré !');
+        success('Serveur démarré !');
         api();
     });
 };
