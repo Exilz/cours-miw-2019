@@ -1,3 +1,4 @@
 // Point d'entrée de du serveur node
+import app from './src/index';
 
-console.log('Serveur démarré !');
+app();
