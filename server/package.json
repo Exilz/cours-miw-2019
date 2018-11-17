@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel watch:server watch:build",
     "build": "webpack -p",
-    "dev": "MONGO_URL=mongodb://localhost:1337/openfoodfacts npm start",
+    "dev": "MONGO_URL=mongodb://localhost:27017/openfoodfacts npm start",
     "watch:build": "webpack --watch",
     "watch:server": "nodemon --inspect=9223 \"./dist/index.js\" --watch \"./dist\""
   },
