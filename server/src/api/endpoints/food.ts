@@ -26,4 +26,27 @@ export default () => {
             });
         }
     });
+
+    appRouter.post('/food/insert/:code', async (req: Request, res: Response) => {
+        try {
+            const insertionResult = await foodModel.updateOne(
+                { _id: req.params.code },
+                formatFood(req.body, req.params.code),
+                { upsert: true }
+            );
+            if (insertionResult.ok > 0) {
+                return res.json({ 'status': 'ok', 'message': `Produit ${req.params.code} inséré avec succès.` });
+            } else {
+                return res.status(500).json({ 'status': 'fail', 'message': "Le produit n'a pas pu être inséré." });
+            }
+        } catch (err) {
+            // Erreur autre de la part du serveur
+            error(`Erreur lors de l'ajout du produit ${req.params.code}: ${err.toString()}`);
+            return res.status(500).json({
+                'error': 'Erreur inattendue de la part du serveur',
+                'msg': err.toString()
+            });
+        }
+    });
+
 };
