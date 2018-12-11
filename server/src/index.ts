@@ -10,6 +10,8 @@ export const appRouter = express.Router();
 app.use(appRouter);
 // Configuration de body-parser afin de récupérer les paramètres POST
 appRouter.use(bodyParser.urlencoded({ extended: true }));
+// On "sert" les fichiers présents dans le dossier "static", comme les images
+appRouter.use('/static', express.static('static'));
 
 export default () => {
     app.listen(8080, () => {
