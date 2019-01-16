@@ -4,7 +4,8 @@ import * as mongoose from 'mongoose';
 const foodSchema = new mongoose.Schema({
     _id: String,
     images: [String],
-    code: Number,
+    additives: [String],
+    code: String,
     name: String,
     brand: String,
     // Pour 100g de produit
@@ -23,7 +24,7 @@ export const foodModel = mongoose.model('food', foodSchema, 'foods');
 
 const commentSchema = new mongoose.Schema({
     date: Number, // timestamp
-    code: Number, // code du produit concerné
+    code: String, // code du produit concerné
     name: String,
     message: String
 });
