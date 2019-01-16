@@ -7,6 +7,12 @@ import { success } from './utils/logger';
 const app = express();
 // Instantiation du routeur
 export const appRouter = express.Router();
+// Autorisation des CORS sur l'API
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 app.use(appRouter);
 // Configuration de body-parser afin de récupérer les paramètres POST
 appRouter.use(bodyParser.urlencoded({ extended: true }));
