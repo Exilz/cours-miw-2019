@@ -1,0 +1,63 @@
+.ProductHeader {
+
+    &--container {
+
+        display: flex;
+        padding: 15px 0px;
+        max-height: 200px;
+        border-bottom: 5px solid lightgray;
+    }
+
+    &--image-container {
+
+        flex: 1;
+        text-align: center;
+
+        > img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &--rightCol {
+        flex: 1;
+        padding: 0px 0px 0px 20px;
+    }
+
+    &--title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &--brand {
+        font-size: 15px;
+        color: $darkgray;
+    }
+
+    &--overall {
+
+        &-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        &-circle-container {
+            display: flex;
+            align-items: center;
+            padding: 0px 10px 0px 0px;
+        }
+
+        &-value {
+
+            &-container {
+                flex: 1;
+            }
+            @include font-bold;
+        }
+
+        &-label {
+            color: $darkgray;
+        }
+    }
+}
