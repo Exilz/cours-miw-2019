@@ -6,4 +6,4 @@ export const isServer = typeof window === 'undefined';
 // On exporte le polyfill de fetch adéquat en fonction de l'environnement (client/serveur).
 export const fetch = isServer ? serverFetch : clientFetch;
 // Le domaine où est hébergé notre API.
-export const DOMAIN = 'http://api.miw.les2cm.eu';
+export const DOMAIN = 'https://api.miw.les2cm.eu';
