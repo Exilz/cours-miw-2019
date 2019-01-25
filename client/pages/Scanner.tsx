@@ -63,6 +63,7 @@ export default class Scanner extends Component<IProps, IState> {
             { cameraIndex: this.state.cameraIndex === 0 ? 1 : 0 },
             () => {
                 this.codeReader && this.codeReader.reset();
+                this.setupScanner();
             }
         );
     }
