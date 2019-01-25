@@ -15,6 +15,7 @@ export default class Scanner extends Component<IProps, IState> {
     constructor (props: IProps) {
         super(props);
         this.state = { cameraIndex: 0 };
+        this.switchCamera = this.switchCamera.bind(this);
     }
 
     componentDidMount () {
