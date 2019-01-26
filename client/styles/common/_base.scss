@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    @include font-regular;
+}
+
+.App {
+
+    &--content {
+
+        &-container {
+
+            display: flex;
+            padding: 25px;
+        }
+    }
+}

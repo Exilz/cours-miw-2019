@@ -1,0 +1,23 @@
+$primary-green: #03c95b;
+$secondary-green: #14b45a;
+$lightgray: #d7d7d7;
+$darkgray: #737476;
+
+// Qualities
+$excellent: #1ec14f;
+$good: #13e26c;
+$average: #fb8112;
+$mediocre: #ff1b3e;
+
+// Fonts
+@mixin font-regular {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin font-bold {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}

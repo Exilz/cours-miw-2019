@@ -1,0 +1,80 @@
+.ProductQualities {
+
+    &--container {
+        padding: 10px 0px;
+    }
+
+    &--header {
+        display: flex;
+
+        &-qualities {
+            flex: 1;
+        }
+
+        &-quantity {
+            flex: 1;
+            text-align: right;
+            color: $darkgray;
+        }
+    }
+
+    &--list {
+
+        &-container {
+            padding: 10px 0px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0px;
+
+            &-icon {
+                width: 45px;
+                color: gray;
+                font-size: 25px;
+            }
+
+            &-desc {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 0px 0px 15px 0px;
+                border-bottom: 1px solid $lightgray;
+
+                &.last {
+                    border-bottom: none;
+                }
+
+                &-label {
+                    font-size: 16px;
+                }
+
+                &-quality {
+                    color: $darkgray;
+                }
+            }
+
+            &-value {
+                display: flex;
+
+                &-number {
+                    color: $darkgray;
+                }
+
+                &-circle {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 8px;
+                    margin: 0px 5px;
+
+                    &.excellent { background-color: $excellent; }
+                    &.good { background-color: $good; }
+                    &.average { background-color: $average; }
+                    &.mediocre { background-color: $mediocre; }
+                }
+            }
+
+        }
+    }
+}

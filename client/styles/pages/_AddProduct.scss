@@ -1,0 +1,62 @@
+.AddProduct {
+
+    &--container {
+
+        width: 100%;
+
+        input {
+            padding-top: .9375rem;
+            margin-bottom: 1.25rem;
+            box-sizing: border-box;
+            display: block;
+            background-color: transparent;
+            color: rgba(0,0,0,.87);
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,.26);
+            outline: 0;
+            width: 100%;
+            padding: 0;
+            box-shadow: none;
+            border-radius: 0;
+            font-size: 1rem;
+
+            &:focus {
+                border-bottom: 2px solid $primary-green;
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: white;
+            padding: 0 1.6rem;
+            text-align: center;
+            line-height: 2.25rem;
+            background-color: $secondary-green;
+            border: none;
+            border-radius: 2px;
+
+            &:disabled {
+                background-color: $darkgray;
+            }
+        }
+
+    }
+
+    &--title {
+        font-size: 2rem;
+        @include font-bold;
+        color: $secondary-green;
+        margin: 0px 0px 30px 0px;
+    }
+
+    &--result {
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+
+        &.success { color: $excellent }
+        &.fail { color: $mediocre }
+    }
+
+}
